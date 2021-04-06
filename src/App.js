@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import StateExample from './03/StateExample';
+import Counter from './03/Counter';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="title">리액스 시작하기!</h1>
+    <div>
+      <StateExample></StateExample>
+      <Counter></Counter>
     </div>
   );
 }
