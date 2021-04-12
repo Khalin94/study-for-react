@@ -3,22 +3,27 @@ import React, { Component } from 'react';
 class Counter extends Component {
   constructor(props) {
     super(props);
-    console.log('props : ', props);
     this.state = {
-      count: props.count,
+      count: 0,
     };
+
     this.increaseCount = this.increaseCount.bind(this);
   }
-
   increaseCount() {
+    /* 
+    this.setState({
+      count: this.state.count + 1,
+    });
+    */
     this.setState(({ count }) => ({
       count: count + 1,
     }));
   }
+
   render() {
     return (
       <div>
-        현재 카운트 : {this.state.count}
+        <span>카운트 : {this.state.count}</span>
         <button onClick={this.increaseCount}>카운트 증가</button>
       </div>
     );
