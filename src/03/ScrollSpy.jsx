@@ -5,7 +5,6 @@ class ScrollSpy extends PureComponent {
     super(props);
     this.setRef = this.setRef.bind(this);
     this.checkPosition = this.checkPosition.bind(this);
-    window.addEventListener('scroll', this.checkPosition);
   }
 
   setRef(ref) {
@@ -21,6 +20,7 @@ class ScrollSpy extends PureComponent {
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.checkPosition);
     this.checkPosition();
   }
 

@@ -60,7 +60,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  onChage: () => {},
+  onChange: () => {},
   onFocus: () => {},
   autoFocus: false,
   type: 'text',
